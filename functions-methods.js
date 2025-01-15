@@ -9,7 +9,16 @@
 // getEmailDomain("t.mellink@novi.nl") geeft novi.nl
 // getEmailDomain("a.wiersma@outlook.com") geeft outlook.com
 
+// variabele.substring(5) = index 5 t/m string.length
+// variabele.indexOf("@");
 
+
+// function getEmailDomain (mail){
+//     let emailAdres = mail;
+//     let theSpot = emailAdres.indexOf("@");
+//     return emailAdres.substring(theSpot);
+// }
+// console.log(getEmailDomain("n.eeken@novi-education.nl"));
 
 
 /* Opdracht  2 */
@@ -20,6 +29,23 @@
 // typeOfEmail("novi.nlaapjesk@outlook.com") geeft geeft "Extern" <-- deze moet het ook doen!
 // typeOfEmail("a.wiersma@outlook.com") geeft "Extern"
 
+// novi domein heeft (medewerker)
+// novi-education domein (student)
+// extern domein (zoals gmail of outlook)
+
+function typeOfMail(mail){
+    let emailAdres = mail;
+    let theSpot = emailAdres.indexOf("@");
+    let domain = emailAdres.substring(theSpot);
+    if (domain.includes("novi-education")){
+        return "student";
+    }else if (domain.includes("novi") && domain.length ===5) {
+        return "medewerker";
+    }else return "extern domein";
+}
+console.log(typeOfMail("t.mellink@novi.nl")) // dit gaat niet helemaal goed, niet genoeg tijd om te fine-tunen, laatste oefening gaat ook niet lukken,
+//iets te laat aan mn huiswerk begonnen ben ik bang. Leuke oefeningen, zal het zeker nog afmaken, ook de extra
+//oefeningen, alvast bedankt voor het nakijken!
 
 
 /* Opdracht  3 */
